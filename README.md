@@ -21,7 +21,7 @@ npm run build --report
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 
-#本科毕业设计项目
-##《校园二手书交易平台》
+# 本科毕业设计项目
+## 《校园二手书交易平台》
 * 开发人员
     > Jason
