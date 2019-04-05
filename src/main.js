@@ -4,8 +4,14 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
+//引入element-ui
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+//引入第三方icon
+import './assets/icon/css/font-awesome.min.css'
+Vue.use(ElementUI);
+
+
 
 Vue.config.productionTip = false;
 
