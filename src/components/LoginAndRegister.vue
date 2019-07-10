@@ -45,6 +45,7 @@ export default {
             border-width: 0 0 1px 0;
             border-color: #ccc;
             border-style: solid;
+            text-align: center;
         }
 
         .active {

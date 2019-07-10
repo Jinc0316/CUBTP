@@ -3,15 +3,25 @@
     <div class="block">
         <!-- <span class="demonstration">默认 Hover 指示器触发</span> -->
         <el-carousel height="300px">
-            <el-carousel-item v-for="item in 4" :key="item">
-                <h3>{{ item }}</h3>
+            <el-carousel-item v-for="(item,i) in bannerList" :key="i" style="z-index:1" :style="{backgroundImage: 'url(' + require('@/assets/images/banner_img/'+ item.bannerImg) + ')'}">
             </el-carousel-item>
         </el-carousel>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            bannerList:[
+                {"bannerImg" : "banner_1.jpg"},
+                {"bannerImg" : "banner_2.jpg"},
+                {"bannerImg" : "banner_3.jpg"},
+                {"bannerImg" : "banner_4.jpg"}
+            ]
+        }
+    }
+};
 </script>
 
 

@@ -1,31 +1,45 @@
 <template>
     <div class="home">
         <nav-header></nav-header>
-        <banner-box></banner-box>
+        <!-- <banner-box></banner-box>
         <option-menu></option-menu>
-        <book-list></book-list>
+        <book-list></book-list>-->
+
+        <router-view v-if="isRouterAlive"/>
+        <footer-box></footer-box>
     </div>
 </template>
 
 
 <script>
 import Header from "./Header/Header";
-import Banner from "./Body/Banner";
-import OptionMenu from "./Body/OptionMenu";
-import BookList from "./Body/BookList";
+
+import Footer from "./Footer/Footer";
+// import OptionMenu from "./Body/OptionMenu";
+// import BookList from "./Body/BookList";
 
 export default {
-    data() {
+    provide() {
         return {
-            
+            reload: this.reload
         };
     },
-    methods: {},
+    data() {
+        return {
+            isRouterAlive: true
+        };
+    },
+    methods: {
+        reload() {
+            this.isRouterAlive = false;
+            this.$nextTick(() => (this.isRouterAlive = true));
+        }
+    },
     components: {
         "nav-header": Header,
-        "banner-box": Banner,
-        "option-menu": OptionMenu,
-        "book-list": BookList
+        "footer-box": Footer
+        // "option-menu": OptionMenu,
+        // "book-list": BookList
     }
 };
 </script>
